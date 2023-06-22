@@ -1,12 +1,12 @@
-* {
-  background-color: lightgray;
+body {
+  background-color: #eeeeee;
 }
 h1 {
   font-size: 50px;
   color: blue;
   text-align: center;
 }
-.date {
+h3 {
   text-align: right;
   font-weight: bold;
 }
