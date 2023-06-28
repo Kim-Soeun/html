@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>디스플레이</title>
+  <style>
+    * {
+      box-sizing: border-box;    
+      /* 박스 사이즈를 외곽선 포함해서 설정 */
+    }
+    nav ul{
+      list-style: none;
+    }
+    nav ul li {
+      display: inline-block;
+      border:  1px solid #222;
+      padding: 20px;
+      margin: 0 20px;
+    }
+    #menu {
+      display: none;
+      /* none은 공간자체가 사라짐 */
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li>메뉴 1</li>
+      <li id="menu">메뉴 2</li>
+      <li>메뉴 3</li>
+      <li>메뉴 4</li>
+    </ul>
+  </nav>
+</body>
+
+</html>

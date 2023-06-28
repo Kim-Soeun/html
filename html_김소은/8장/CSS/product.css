@@ -1,0 +1,29 @@
+div {
+  border: 1px solid #222;
+  padding: 20px;
+  margin: 20px;
+}
+#container {
+  width: 600px;
+  border: none;
+  margin: 0 auto;
+}
+table, th, td{
+  border: 1px dotted lightgray;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 10px 20px;
+}
+table {
+  margin: 0 auto;
+}
+#package {
+  padding-bottom: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+#description {
+  border-top-left-radius:20px ;
+  border-top-right-radius:20px ;
+}
