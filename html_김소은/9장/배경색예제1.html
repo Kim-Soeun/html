@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>배경색</title>
+  <style>
+    .desc {
+      width: 200px;
+      height: 100px;
+      padding: 20px;
+      margin: 20px;
+      border: 3px dotted black;
+      background-color: rgb(243, 213, 157); 
+      /* 선까지 배경색 나타남 */
+      float: left;
+    }
+    #clip-padding {
+      background-clip: padding-box ;
+      /* 박스모델에 테두리 뺀 패딩 범위까지 적용 */
+    }
+    #clip-content {
+      background-clip: content-box;
+      /* 박스모델에 내용 부분만 적용 */
+    }
+  </style>
+</head>
+<body>
+  <div id="containder">
+    <div class="desc" id="clip-border"> 가나다라마바사 </div>
+    <div class="desc" id="clip-padding"> 가나다라마바사 </div>
+    <div class="desc" id="clip-content"> 가나다라마바사 </div>
+  </div>
+</body>
+</html>
