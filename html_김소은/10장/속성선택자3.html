@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>속성선택자</title>
+  <style>
+    ul {
+      list-style: none;
+    }
+    ul li a {
+      color: black;
+      text-decoration: none;
+    }
+    ul li {
+      width: 40px;
+      padding: 20px 50px;
+      border: 1px solid black;
+      background-color: yellow;
+      display: inline-block;  /* inline-block은 padding, margin값 적용 가능 /  inline은 x */
+      margin-right: 30px;
+    }
+   [class ~= "button"] {    /* 속성값이 여러 개일 때 찾아서 적용가능 */
+    box-shadow: rgba(0, 0, 0, 0.4) 4px 4px;
+    border-radius: 5px;
+   }
+  </style>
+</head>
+<body>
+  <ul>
+    <li class="flat">정치</li>
+    <li class="flat">경제</li>
+    <li class="button">사회</li>
+    <li class="flat button">문화</li> 
+    <!-- /* class="flat button"  flat과 button 모두 적용됨(class) */ -->
+  </ul>
+</body>
+</html>
