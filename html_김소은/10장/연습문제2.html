@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    .container {
+      border-bottom: 1px solid lightgray;
+    }
+
+    .container ul {
+      list-style: none;
+    }
+
+    .container li {
+      display: inline-block;
+      padding: 20px;
+    }
+
+    .container a {
+      text-decoration: none;
+    }
+
+    .container a:hover {
+      background-color: black;
+      color: white;
+    }
+
+
+    #info {
+      width: 500px;
+      padding: 10px;
+      border: 1px solid black;
+      margin: 10px auto;
+    }
+
+    #info ul {
+      list-style: none;
+      margin: -20px;
+    }
+
+    #info fieldset {
+      border: 1px solid lightgray;
+      padding: 40px;
+    }
+
+    #info input:focus {
+      background-color: yellow !important;
+    }
+
+    #info[input=radio] {
+      display: block;
+    }
+
+    #info button {
+      display: block;
+      margin: 10px auto;
+      border-radius: 20px;
+      padding: 5px;
+      width: 70px;
+    }
+
+    input:checked + label {
+      color: red;
+    }
+    #intro:target { 
+      background-color: lightgray; /* 다시하기 */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <ul>
+      <li><a href="#">이용 안내</a></li>
+      <li><a href="#inrto">객실 소개</a></li>
+      <li><a href="#">예약 방법 및 요금</a></li>
+      <li><a href="#">예약하기</a></li>
+    </ul>
+  </div>
+  <form id="info">
+    <fieldset>
+      <legend>개인 정보</legend>
+      <table>
+        <tr>
+          <td>이름</td>
+          <td><input type="text"></td>
+        </tr>
+        <tr>
+          <td>연락처</td>
+          <td><input type="tel"></td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset id="intro">
+      <legend>객실 형태</legend>
+      <ul>
+        <li>
+          <input type="radio" name="room" id="basic">
+          <label for="basic">기본형(최대 2인)</label>
+        </li>
+        <li>
+          <input type="radio" name="room" id="family">
+          <label for="family">가족형(최대 8인)</label>
+        </li>
+      </ul>
+    </fieldset>
+    <button type="submit">제출</button>
+  </form>
+</body>
+
+</html>
