@@ -3,27 +3,42 @@
 
 <head>
   <title>Document</title>
+ 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+    }
     .container {
       border-bottom: 1px solid lightgray;
+      padding-bottom: 10px;
     }
 
     .container ul {
-      list-style: none;
+      text-align: center;   /* 상단메뉴 가운데 맞춤 */
     }
 
     .container li {
       display: inline-block;
+      list-style: none;
       padding: 20px;
+      width: 150px;
     }
 
-    .container a {
+    .container a:link, .container a:visited {
+      font-size: 14px;
+      padding: 10px;
       text-decoration: none;
+      color: black;
     }
 
-    .container a:hover {
+    .container a:hover, .container a:focus {    /* 마우스를 위에 올려두거나 포커스가 있을 때 */
       background-color: black;
       color: white;
+    }
+    .container a:active {  /* 마우스를 클릭하고 있을 때 */
+      background-color: #f00;
     }
 
 
@@ -31,17 +46,45 @@
       width: 500px;
       padding: 10px;
       border: 1px solid black;
-      margin: 10px auto;
-    }
-
-    #info ul {
-      list-style: none;
-      margin: -20px;
+      margin: 30px auto;
+      border-radius: 5px;
     }
 
     #info fieldset {
       border: 1px solid lightgray;
       padding: 40px;
+      margin-bottom: 30px;
+    }
+
+    #info legend {
+      font-size: 16px;
+      font-weight: bold;
+      padding-left: 5px;
+      padding-bottom: 10px;
+    }
+
+    #info ul li {
+      list-style: none;
+    }
+
+    #info fieldset:first-of-type label {
+      /* 필드셋 중 첫번째 타입 밑에 있는 라벨 (이름과 연락처) */
+      float: left;
+      font-size: 13px;
+      width: 60px;
+    }
+
+    #info input:not([type=radio]) {
+      /* input 태그 중 타입이 라디오가 아닌 것 */
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      padding: 5px;
+      width: 200px;
+    }
+
+    #info input:not([type=radio]):hover {
+      /* input 태그 중 타입이 라디오가 아닌 것에 마우스를 올려 놓으면 */
+      border-color: #f00;
     }
 
     #info input:focus {
@@ -52,19 +95,24 @@
       display: block;
     }
 
+    #info input:checked + label {  /* input 요소에 checked 속성이 추가되었을 때 */
+      color: red;
+      font-weight: bold;
+    }
+
     #info button {
       display: block;
-      margin: 10px auto;
+      margin: auto;
       border-radius: 20px;
       padding: 5px;
       width: 70px;
+      letter-spacing: 1px;
+      font: 16px;
+      font-family: 'Nanum Pen Script', cursive;
     }
 
-    input:checked + label {
-      color: red;
-    }
     #intro:target { 
-      background-color: lightgray; /* 다시하기 */
+      background-color: lightgray; 
     }
   </style>
 </head>
@@ -73,22 +121,23 @@
   <div class="container">
     <ul>
       <li><a href="#">이용 안내</a></li>
-      <li><a href="#inrto">객실 소개</a></li>
+      <li><a href="#intro">객실 소개</a></li>
       <li><a href="#">예약 방법 및 요금</a></li>
       <li><a href="#">예약하기</a></li>
     </ul>
   </div>
+
   <form id="info">
     <fieldset>
       <legend>개인 정보</legend>
       <table>
         <tr>
-          <td>이름</td>
-          <td><input type="text"></td>
+          <td><label for="fullname">이름</label></td>
+          <td><input id="fullname" name="fullname" type="text" required></td>
         </tr>
         <tr>
-          <td>연락처</td>
-          <td><input type="tel"></td>
+          <td><label for="tel">연락처</label></td>
+          <td><input id="tel" name="tel" type="tel" required></td>
         </tr>
       </table>
     </fieldset>
