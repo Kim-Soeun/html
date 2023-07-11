@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>마무리문제2</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      margin: 30px;
+      list-style: none;
+      text-align: center;
+    }
+    ul li {
+      float: left;
+      width: 100px;
+      padding: 5px 40px;
+      background-color: lightgray;
+    }
+
+    ul li:not(:last-of-type) {
+      border-right: 2px solid gray;   /* 메뉴6 오른쪽 테두리 삭제 */
+    }
+
+    ul li:hover:not(:last-of-type) {    /* 메뉴6 제외 나머지 마우스 포인터 스타일 적용 */
+      background-color: #555;
+      color: #fff;
+    }
+
+    ul li:hover:last-of-type {        /* 메뉴6 마우스 포인터 스타일 적용 */ 
+      background-color: #b30000;
+      color: #fff;
+    }
+    
+  </style>
+</head>
+<body>
+  <ul>
+    <li>메뉴1</li>
+    <li>메뉴2</li>
+    <li>메뉴3</li>
+    <li>메뉴4</li>
+    <li>메뉴5</li>
+    <li>메뉴6</li>
+  </ul>
+</body>
+</html>
