@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>블로그3</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #container {
+      width: 600px;
+      height: 200px;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .box {
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+    }
+    .caption {
+      width: 100%;
+      height: 200px;
+      position: absolute;
+      top: 150px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .box:hover .caption {
+      transition: 1s linear;
+      transform: translateY(-150px);
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="box">
+      <img src="images/movie2.jpg">
+      <div class="caption">
+        <h2>영화 추천</h2>
+        <p>안녕하세요 오늘은 2018년 개봉한 독립영화 소공녀를 리뷰해 보겠습니다</p>
+      </div>
+    </div>
+    <div class="box">
+      <img src="images/beach.jpg">
+      <div class="caption">
+        <h2>여행을 떠나요!</h2>
+        <p>여름이면 생각나는 곳이 바로 바다죠? 우리나라의 대표적인 해양도시 부산의 광안리로 같이 떠나봐요!</p>
+      </div>
+    </div>
+    <div class="box">
+      <img src="images/pubao.jpg">
+      <div class="caption">
+        <h2>귀여운 푸바오</h2>
+        <p>요즘 가장 핫한 동물인 귀요미 푸바오를 만나러 같이 가요!</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

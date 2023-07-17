@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <style>
+    #wrapper {
+      width: 600px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 칼럼을 1 : 1 :1 로 지정 */
+      grid-template-rows: minmax(100px, auto); /* 줄 높이 최소 100,  최대치 설정은 auto : 높이가 자동으로 늘어남 */
+    }
+    .items {
+      border: 1px solid black;
+      padding: 20px;
+    }
+    .items:nth-child(2n+1) {
+      background-color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div class="items">가나다라마바사아자차카타파하</div>
+    <div class="items">가나다라마바사아자차카타파하가나다라마바사아자차카타파하</div>
+    <div class="items">가나다라마바사아자차카타파하</div>
+    <div class="items">가나다라마바사아자차카타파하</div>
+    <div class="items">가나다라마바사</div>
+  </div>
+</body>
+</html>
